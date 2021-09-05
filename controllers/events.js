@@ -30,7 +30,6 @@ const createEvent = async (req, res = response) => {
     }
     event.user = req.uid;
     const eventSaved = await event.save();
-    console.log(event);
     res.status(200).json({
       ok: true,
       event: eventSaved,
